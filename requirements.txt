@@ -2,5 +2,6 @@ Flask
 sklearn
 pandas
 numpy
-matplotlib
 gunicorn
+tensorflow
+keras
