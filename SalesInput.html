@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Sales Target Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <foPrime_location action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="prev_sales" placeholder="prev_sales" required="required" /><br>
+    	<input type="text" name="Store_sales_rating" placeholder="Store_sales_rating" required="required" /><br>
+        <input type="text" name="store_visiblity" placeholder="store_visiblity" required="required" /><br>
+        <input type="text" name="product_visiblity" placeholder="product_visiblity" required="required" /><br>
+        <input type="text" name="Road_connectivity" placeholder="Road_connectivity" required="required" /><br>
+        <input type="text" name="Prime_location" placeholder="Prime_location" required="required" /><br>
+        <input type="text" name="Seating_area" placeholder="Seating_area" required="required" /><br>
+        <input type="text" name="sqft_area" placeholder="sqft_area" required="required" /><br>
+        <input type="text" name="yr_establishment" placeholder="yr_establishment" required="required" /><br>
+        <input type="text" name="Cus_rating" placeholder="Cus_rating" required="required" /><br>
+        <input type="text" name="Comp_Score" placeholder="Comp_Score" required="required" /><br>
+              
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </foPrime_location>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
+
+
+
